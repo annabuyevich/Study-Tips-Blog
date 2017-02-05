@@ -1,0 +1,29 @@
+<% include ../partials/header %>
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <h1>Welcome to the Study Tips Blog!</h1>
+            <p>View the helpful study tips that people have posted!</p>
+            <p>
+                <a class="btn btn-primary btn-lg" href="/tips/new">Add New Study Tip</a>
+            </p>
+        </div>
+    </header>
+    
+    <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+        <% tips.forEach(function(tip){ %>
+            <div class="col-md-4 col-sm-4">
+                <div class="thumbnail">
+                    <img src="<%= tip.image %>">
+                    <div class="caption">
+                        <h4><%=tip.name %></h4>
+                    </div>
+                    <p>
+                        <a href="/tips/<%=tip._id %>" class="btn btn-primary">More Info</a>
+                    </p>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</div>
+<% include ../partials/footer %>

@@ -1,0 +1,27 @@
+<% include ../partials/header %>
+<div class="container">
+    <div class="row">
+        <h1 style="text-align: center">Create a New Study Tip</h1>
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/tips" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="name" placeholder="tip">
+                </div>
+                <div class="form-group">
+                  <input class="form-control" type="number" name="rate" placeholder="rate- how helpful" min="1" max="5">
+               </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="image" placeholder="image url - nice image related to tip">
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" type="text" name="input" placeholder="ellaborate on the tip"></textarea
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Submit</button>
+                </div>
+            </form>
+            <a href="/tips">Return</a>
+        </div>
+    </div>
+</div>
+<% include ../partials/footer %>
